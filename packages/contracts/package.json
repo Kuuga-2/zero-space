@@ -1,0 +1,26 @@
+{
+  "name": "@workspace/contracts",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "generate": "wagmi generate"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@wagmi/cli": "^2.2.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "viem": "^2.26.0",
+    "wagmi": "^2.14.16"
+  },
+  "exports": {
+    "./abis/*": "./abis/*.ts",
+    ".": "./index.ts"
+  }
+}
