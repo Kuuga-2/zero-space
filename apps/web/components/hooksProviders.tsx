@@ -11,10 +11,8 @@ export function HookProviders({ children }: { children: React.ReactNode }) {
   const { isConnected } = useAppKitAccount()
 
   useEffect(() => {
-    if(isConnected && pathname !== '/dashboard'){
+    if(isConnected && pathname === '/'){
       router.push('/dashboard')
-    }else if(!isConnected && pathname !== '/'){
-      router.push('/')
     }
   }, [isConnected, pathname, router])
   
