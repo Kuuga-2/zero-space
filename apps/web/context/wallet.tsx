@@ -31,7 +31,7 @@ createAppKit({
     swaps: false,
     onramp: false,
   },
-  themeMode: 'dark',
+  themeMode: 'light',
   themeVariables:{
     '--w3m-accent': '#ff3ab3',
   },

@@ -4,6 +4,7 @@ import "@workspace/ui/globals.css"
 import { Providers } from "@/components/providers"
 import { headers } from "next/headers"
 import WalletContextProvider from "@/context/wallet"
+import { HookProviders } from "@/components/hooksProviders"
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -30,7 +31,9 @@ export default async function RootLayout({
       >
         <Providers>
           <WalletContextProvider cookies={cookies}>
-            {children}
+            <HookProviders>
+              {children}
+            </HookProviders>
           </WalletContextProvider>
         </Providers>
       </body>
